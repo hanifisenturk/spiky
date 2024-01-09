@@ -6,7 +6,7 @@ import {motion} from 'framer-motion';
 const Mascot = () => {
   return (
     <motion.div
-      className="fixed left-0 bottom-0 cursor-pointer hidden md:block select-none"
+      className="fixed left-0 bottom-0 hidden md:block select-none"
       initial={{opacity: 0, x: -128}}
       animate={{opacity: 1, x: -64}}
       transition={{duration: 0.3, bounce: 0.5}}
