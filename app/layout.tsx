@@ -1,4 +1,4 @@
-import type {Metadata} from 'next';
+import type {Metadata, Viewport} from 'next';
 import {Inter} from 'next/font/google';
 import './globals.css';
 import Providers from './store/providers';
@@ -15,14 +15,16 @@ export const metadata: Metadata = {
   generator: 'Next.js',
   manifest: '/manifest.json',
   keywords: ['spiky.ai', 'nextjs', 'nextjs13', 'next13', 'pwa'],
-  themeColor: [{media: '(prefers-color-scheme: dark)', color: '#fff'}],
   authors: [{name: 'Mehmet Hanifi Senturk'}],
-  viewport:
-    'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
   icons: [
     {rel: 'apple-touch-icon', url: 'icons/icon-192x192.png'},
     {rel: 'icon', url: 'icons/icon-192x192.png'},
   ],
+};
+
+export const viewPort: Viewport = {
+  viewportFit: 'auto',
+  themeColor: [{media: '(prefers-color-scheme: dark)', color: '#fff'}],
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
